@@ -8,7 +8,7 @@
             </div>
             <div class="media-body">
                 <div class="foldable">
-                    <h5><a href="javascript:void(0)" class="username">Rıfat Duru</a></h5>
+                    <h5><a href="javascript:void(0)" class="username">John Doe</a></h5>
                     <ul>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,8 +52,10 @@
     <div class="menubar-scroll">
         <div class="menubar-scroll-inner">
             <ul class="app-menu">
+
+
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
+                    <a href="javascript:void(0)">
                         <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
                         <span class="menu-text">Dashboard</span>
                     </a>
@@ -62,13 +64,13 @@
                 <li>
                     <a href="javascript:void(0)">
                         <i class="menu-icon zmdi zmdi-settings zmdi-hc-lg"></i>
-                        <span class="menu-text">Settings</span>
+                        <span class="menu-text">Ayarlar</span>
                     </a>
                 </li>
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-layers zmdi-hc-lg"></i>
+                        <i class="menu-icon zmdi zmdi-apps zmdi-hc-lg"></i>
                         <span class="menu-text">Galeriler</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -80,79 +82,75 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-pages zmdi-hc-lg"></i>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon zmdi zmdi-layers zmdi-hc-lg"></i>
                         <span class="menu-text">Slider</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-cubes "></i>
+                    <a href="<?php echo base_url("product"); ?>">
+                        <i class="menu-icon fa fa-cubes"></i>
                         <span class="menu-text">Ürünler</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-newspaper-o "></i>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-newspaper-o"></i>
                         <span class="menu-text">Haberler</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-calendar "></i>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-calendar"></i>
                         <span class="menu-text">Eğitimler</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-check "></i>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
                         <span class="menu-text">Referanslar</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-puzzle-piece "></i>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon zmdi zmdi-puzzle-piece zmdi-hc-lg"></i>
                         <span class="menu-text">Markalar</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-user-secret "></i>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-user-secret"></i>
                         <span class="menu-text">Kullanıcılar</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-user "></i>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-users"></i>
                         <span class="menu-text">Aboneler</span>
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="javascript:void(0)" class="submenu-toggle">
+                    <a href="javascript:void(0)">
                         <i class="menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
                         <span class="menu-text">Popup Hizmeti</span>
                     </a>
                 </li>
 
-
-
-                <li class="menu-separator"><hr></li>
-
                 <li>
-                    <a href="javascript:void(0)">
+                    <a href="documentation.html">
                         <i class="menu-icon zmdi zmdi-view-web zmdi-hc-lg"></i>
-                        <span class="menu-text">Anasayfa</span>
+                        <span class="menu-text">Ana Sayfa</span>
                     </a>
                 </li>
-
 
             </ul><!-- .app-menu -->
         </div><!-- .menubar-scroll-inner -->

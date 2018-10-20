@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="media-body">
-                        <h5 class="media-heading">John Doe</h5>
+                        <h5 class="media-heading">Rıfat Duru</h5>
                         <small class="media-meta">active now</small>
                     </div>
                 </div>

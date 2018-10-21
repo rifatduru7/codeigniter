@@ -8,11 +8,18 @@
 
         <div class="col-md-12">
         <div class="widget p-lg">
+
+            <?php if(empty($items)) { ?>
+
             <div class="alert alert-danger" role="alert">
                 <strong>Uyarı !</strong>
                 <span>Burada herhangi bir kayıt bulunamamıştır.Yeni eklemek için lütfen</span>
                 <a href="#" class="alert-link">Tıklayın.</a>
             </div>
+
+
+            <?php  } else { ?>
+
             <table class="table table-hover table-striped ">
                 <thead>
                 <th>ID</th>
@@ -22,63 +29,35 @@
                 <th>Durumu</th>
                 <th>İşlem</th>
                 </thead>
-                <tr>
-                <tr>
-                <td>1</td>
-                <td>monitor_askisi</td>
-                <td>Monitör Askısı</td>
-                <td>Monitor Askısı Mediamarkt</td>
-                <td>
-                    <input id="switch-2-2" type="checkbox" data-switchery data-color="#10c469" checked />
-                </td>
-                <td>
-                    <a href="#" type="button" class="btn btn-danger btn-sm btn-outline"><i class="fa fa-trash"></i> Sil </a>
-                    <a href="#" type="button" class="btn btn-info btn-sm btn-outline"><i class="fa fa-pencil"></i> Düzenle </a>
-                </td>
-                </tr>
-                <tr>
-                <td>2</td>
-                <td>monitor_askisi</td>
-                <td>Monitör Askısı</td>
-                <td>Monitor Askısı Mediamarkt</td>
-                <td>
-                    <input id="switch-2-2" type="checkbox" data-switchery data-color="#10c469" checked />
+                <tbody>
 
-                </td>
-                <td>
-                    <a href="#" type="button" class="btn btn-danger btn-sm btn-outline"><i class="fa fa-trash"></i> Sil </a>
-                    <a href="#" type="button" class="btn btn-info btn-sm btn-outline"><i class="fa fa-pencil"></i> Düzenle </a>
-                </td>
+                        <?php foreach ($items as $item) { ?>
 
-                </tr>
+                        <tr>
+                            <td>#<?php echo $item->id; ?></td>
+                            <td><?php echo $item->url; ?></td>
+                            <td><?php echo $item->title; ?></td>
+                            <td><?php echo $item->description; ?></td>
+                            <td>
+                                <input
+                                        id=""
+                                        type="checkbox"
+                                        data-switchery
+                                        data-color="#10c469"
+                                        <?php echo ($item->isActive) ? "checked" : ""; ?>
+                                />
+                            </td>
+                            <td>
+                                <a href="#" type="button" class="btn btn-danger btn-sm btn-outline"><i class="fa fa-trash"></i> Sil </a>
+                                <a href="#" type="button" class="btn btn-info btn-sm btn-outline"><i class="fa fa-pencil"></i> Düzenle </a>
+                            </td>
+                        </tr>
 
-                <tr>
-                <td>3</td>
-                <td>monitor_askisi</td>
-                <td>Monitör Askısı</td>
-                <td>Monitor Askısı Mediamarkt</td>
-                <td>
-                    <input id="switch-2-2" type="checkbox" data-switchery data-color="#10c469" checked />
-                </td>
-                <td>
-                    <a href="#" type="button" class="btn btn-danger btn-sm btn-outline"><i class="fa fa-trash"></i> Sil </a>
-                    <a href="#" type="button" class="btn btn-info btn-sm btn-outline"><i class="fa fa-pencil"></i> Düzenle </a>
-                </td>
-                </tr>
-                <td>4</td>
-                <td>monitor_askisi</td>
-                <td>Monitör Askısı</td>
-                <td>Monitor Askısı Mediamarkt</td>
-                <td>
-                    <input id="switch-2-2" type="checkbox" data-switchery data-color="#10c469" checked />
-                </td>
-                <td>
-                    <a href="#" type="button" class="btn btn-danger btn-sm btn-outline"><i class="fa fa-trash"></i> Sil </a>
-                    <a href="#" type="button" class="btn btn-info btn-sm btn-outline"><i class="fa fa-pencil"></i> Düzenle </a>
-                </td>
-                </tr>
+                        <?php } ?>
+
                 </tbody>
             </table>
+            <?php } ?>
         </div><!-- .widget -->
     </div><!-- END column -->
 </div>

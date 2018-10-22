@@ -34,6 +34,38 @@ class Product extends CI_Controller
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index" ,$viewData);
     }
     public function save(){
-        echo "saved" ;
+
+        $this->load->library("form_validation");
+
+        // Kurallar yazılır
+        $this->form_validation->set_rules("title", "başlık","required|trim");
+        $this->form_validation->set_message(
+        array(
+            "required" => "<b>{field}</b> alanı doldurulmalır."
+        )
+
+        );
+
+
+
+        // form_validation çalıştırılır
+
+        $validate = $this->form_validation->run();
+
+        if ($validate){
+
+            echo "Kayıt işlemleri başlar...";
+
+        }else{
+
+            echo validation_errors();
+
+        }
+
+
+        // Başarılı ise
+            //Kayıt işlemi başlar
+        //Başarısız ise
+            //Hata ekranda gösterecektir...
     }
 }

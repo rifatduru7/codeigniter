@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <h4 class="m-b-lg">
             Ürün Listesi
-            <a href="#" class="btn btn-info btn-outline btn-sm pull-right" ><i class="fa fa-plus"></i>Yeni Ekle</a>
+            <a href="<?php echo base_url("product/new_form"); ?>" class="btn btn-info btn-outline btn-sm pull-right" ><i class="fa fa-plus"></i>Yeni Ekle</a>
         </h4>
         </div>
 
@@ -14,7 +14,7 @@
             <div class="alert alert-danger" role="alert">
                 <strong>Uyarı !</strong>
                 <span>Burada herhangi bir kayıt bulunamamıştır.Yeni eklemek için lütfen</span>
-                <a href="#" class="alert-link">Tıklayın.</a>
+                <a href="<?php echo base_url("product/new_form"); ?>" class="alert-link">Tıklayın.</a>
             </div>
 
 

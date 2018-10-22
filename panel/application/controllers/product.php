@@ -38,7 +38,7 @@ class Product extends CI_Controller
         $this->load->library("form_validation");
 
         // Kurallar yazılır
-        $this->form_validation->set_rules("title", "başlık","required|trim");
+        $this->form_validation->set_rules("title", "Başlık","required|trim");
         $this->form_validation->set_message(
         array(
             "required" => "<b>{field}</b> alanı doldurulmalır."
@@ -58,8 +58,11 @@ class Product extends CI_Controller
 
         }else{
 
-            echo validation_errors();
-
+            $viewData = new stdClass();
+            $viewData->viewFolder = $this->viewFolder;
+            $viewData->subViewFolder = "add";
+            $viewData->form_error = true;
+            $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index" ,$viewData);
         }
 
 

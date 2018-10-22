@@ -1,4 +1,14 @@
-        <div class="row">
+            <style>
+                .alert {
+                 width:500px;
+                 height: 50px;
+                 margin: 5px 0px ;
+                 color: #1b1b1b;
+                }
+            </style>
+
+
+            <div class="row">
             <div class="col-md-12">
                 <h4 class="m-b-lg">
                     Yeni Ürün Ekleme....
@@ -11,6 +21,17 @@
                     <div class="form-group">
                         <h6 for="exampleInputEmail1">Ürün Adı</h6>
                         <input name="title" class="form-control" id="exampleInputEmail1" placeholder="Ürün başlığı giriniz...">
+                    <?php if (isset($form_error)){ ?>
+                        <div class="alert alert-danger alert-dismissible"  role="alert">
+                            <span class="input-form-error"><?php echo form_error("title"); ?></span>
+                        </div>
+                    <?php }
+
+
+                    ?>
+
+
+
                     </div>
                     <div class="form_group">
                         <h6>Açıklama</h6>

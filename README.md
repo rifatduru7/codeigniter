@@ -2,6 +2,6 @@
 Codeigniter CMS Proje
 Merhabalar burada Codeigniter,python,ruby,vue.js kullanarak çeşitli çalışmalarımı yükleyeceğim.
 
-www.rifatduru.com
-rifat@rifatduru.com
-Twitter : /w4reZz
+www.rifatduru.com <br>
+rifat@rifatduru.com <br>
+<strong>Twitter</strong> : /w4reZz

@@ -66,10 +66,10 @@ class Product extends CI_Controller
                 )
             );
                 if ($insert){
-                    echo "kayıt başarılıdır";
+                    redirect(base_url("product"));
                 }
                 else{
-                    echo "kayıt başarısızdır";
+                    redirect(base_url("product"));
                 }
         }else{
 

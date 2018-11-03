@@ -17,7 +17,7 @@
             </div>
 
             <div class="col-md-12">
-                <form action="<?php echo base_url("product/save"); ?>" method="post">
+                <form action="<?php echo base_url("product/update/$item->id"); ?>" method="post">
                     <div class="form-group">
                         <h6 for="exampleInputEmail1">Ürün Adı</h6>
                         <input name="title" class="form-control" value="<?php echo $item -> title; ?>" id="exampleInputEmail1" placeholder="Ürün başlığı giriniz...">
@@ -40,7 +40,7 @@
 
                         </textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-md btn-outline">Kaydet</button>
+                    <button type="submit" class="btn btn-primary btn-md btn-outline">Güncelle</button>
                     <a href="<?php echo base_url("product"); ?>"  class="btn btn-danger btn-md btn-outline">İptal<a/>
                 </form>
                 </div>

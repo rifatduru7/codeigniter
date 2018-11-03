@@ -102,4 +102,67 @@ class Product extends CI_Controller
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index" ,$viewData);
 
     }
+    public function update($id){
+
+        $this->load->library("form_validation");
+
+        // Kurallar yazılır
+        $this->form_validation->set_rules("title", "Başlık","required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalır."
+            )
+
+        );
+
+
+
+        // form_validation çalıştırılır
+
+        $validate = $this->form_validation->run();
+
+        if ($validate){
+
+            $update =$this->product_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "title"         =>$this->input->post("title"),
+                    "description"   =>$this->input->post("description"),
+                    "url"           =>convertToSEO($this->input->post("title")),
+                    //"isActive"      =>1,
+                    //"createdAt"     =>date('Y-m-d H:i:s')
+
+
+                )
+            );
+            if ($update){
+                redirect(base_url("product"));
+            }
+            else{
+                redirect(base_url("product"));
+            }
+        }else{
+
+            $viewData = new stdClass();
+            $item =$this->product_model->get(
+                array(
+                    "id"    =>$id,
+                )
+            );
+            $viewData->viewFolder = $this->viewFolder;
+            $viewData->subViewFolder = "update";
+            $viewData->form_error = true;
+            $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index" ,$viewData);
+            $viewData->item = $item;
+        }
+
+
+        // Başarılı ise
+        //Kayıt işlemi başlar
+        //Başarısız ise
+        //Hata ekranda gösterecektir...
+    }
+
 }

@@ -22,18 +22,20 @@
 
             <table class="table table-hover table-striped ">
                 <thead>
+                <th><i class="fa fa-reorder"></i></th>
                 <th>ID</th>
-                <th>url</th>
                 <th>Başlık</th>
+                <th>url</th>
                 <th>Açıklama</th>
                 <th>Durumu</th>
                 <th>İşlem</th>
                 </thead>
-                <tbody>
+                <tbody class="sortable" data-url="<?php echo base_url("product/rankSetter");?>">
 
                         <?php foreach ($items as $item) { ?>
 
-                        <tr>
+                        <tr id="ord-<?php echo $item->id; ?>">
+                            <td><i class="fa fa-reorder"></i></td>
                             <td>#<?php echo $item->id; ?></td>
                             <td><?php echo $item->url; ?></td>
                             <td><?php echo $item->title; ?></td>
@@ -55,6 +57,8 @@
                                         <i class="fa fa-trash"></i> Sil
                                 </button>
                                 <a href="<?php echo base_url("product/update_form/$item->id");?>" type="button" class="btn btn-info btn-sm btn-outline"><i class="fa fa-pencil"></i> Düzenle </a>
+                                <a href="<?php echo base_url("product/image_form/$item->id");?>" type="button" class="btn btn-warning btn-sm btn-outline"><i class="fa fa-image"></i> Resimler </a>
+
                             </td>
                         </tr>
 

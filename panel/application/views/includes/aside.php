@@ -3,12 +3,12 @@
         <div class="media">
             <div class="media-left">
                 <div class="avatar avatar-md avatar-circle">
-                    <a href="javascript:void(0)"><img class="img-responsive" src="<?php echo base_url("assets"); ?>/assets/images/221.jpg" alt="avatar"/></a>
+                    <a href="javascript:void(0)"><img class="img-responsive" src="<?php echo base_url("assets"); ?>/assets/images/206.jpg" alt="avatar"/></a>
                 </div><!-- .avatar -->
             </div>
             <div class="media-body">
                 <div class="foldable">
-                    <h5><a href="javascript:void(0)" class="username">John Doe</a></h5>
+                    <h5><a href="javascript:void(0)" class="username">Rıfat Duru</a></h5>
                     <ul>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -19,26 +19,26 @@
                                 <li>
                                     <a class="text-color" href="/index.html">
                                         <span class="m-r-xs"><i class="fa fa-home"></i></span>
-                                        <span>Home</span>
+                                        <span>Anasayfa</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="text-color" href="profile.html">
                                         <span class="m-r-xs"><i class="fa fa-user"></i></span>
-                                        <span>Profile</span>
+                                        <span>Profil</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="text-color" href="settings.html">
                                         <span class="m-r-xs"><i class="fa fa-gear"></i></span>
-                                        <span>Settings</span>
+                                        <span>Ayarlar</span>
                                     </a>
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li>
                                     <a class="text-color" href="logout.html">
                                         <span class="m-r-xs"><i class="fa fa-power-off"></i></span>
-                                        <span>Home</span>
+                                        <span>Anasayfa</span>
                                     </a>
                                 </li>
                             </ul>

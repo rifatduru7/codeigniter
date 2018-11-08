@@ -1,11 +1,4 @@
-            <style>
-                .alert {
-                 width:500px;
-                 height: 50px;
-                 margin: 5px 0px ;
-                 color: #1b1b1b;
-                }
-            </style>
+
             <div class="row">
             <div class="col-md-12">
                 <div class="widget">
@@ -29,19 +22,30 @@
             <div class="col-md-12">
                 <div class="widget">
                   <div class="widget-body">
+
+                      <?php if(empty($item_images)) { ?>
+
+                          <div class="alert alert-info text-center">
+                              <p>Burada herhangi bir resim bulunmamaktadır. </p>
+                          </div>
+
+                      <?php } else { ?>
                     <table class="table table-bordered table-striped table-hover pictures_list">
                       <thead>
-                      <th >id</th>
-                      <th>Görseli</th>
-                      <th>ResimAdı</th>
-                      <th>Durumu</th>
-                      <th>İşlem</th>
+                      <th class="text-center">id</th>
+                      <th class="text-center">Görseli</th>
+                      <th>Resim Adı</th>
+                      <th class="text-center">Durumu</th>
+                      <th class="text-center">İşlem</th>
                       </thead>
                         <tbody>
+
+                        <?php foreach($item_images as $image){ ?>
+
                             <tr>
-                              <td class="w100">1</td>
-                              <td class="w100"><img width="30" src="https://vuejs.org/images/logo.png" alt="görsel" class="img-responsive"></td>
-                              <td class="">Vue_js_Vue.js-Tutorial—A-Guide-on-Prototyping_Web</td>
+                              <td class="w100">#<?php echo $image->id; ?></td>
+                              <td class="w100"><img width="30" src="<?php echo base_url("uploads/{$viewFolder}/$image->img_url"); ?>" alt="<?php echo $image->img_url; ?>" class="img-responsive"></td>
+                              <td class=""><?php echo $image->img_url; ?></td>
                               <td class="w100">
                                   <input
                                           data-url="<?php echo base_url("product/isActiveSetter/");?>"
@@ -50,7 +54,7 @@
                                           type="checkbox"
                                           data-switchery
                                           data-color="#10c469"
-                                      <?php echo (true) ? "checked" : ""; ?>
+                                      <?php echo ($image->id) ? "checked" : ""; ?>
                                   />
                               </td>
                               <td class="w100">
@@ -61,101 +65,10 @@
                               </td>
 
                             </tr>
-                            <tr>
-                                <td class="w100">1</td>
-                                <td class="w100"><img width="30" src="https://vuejs.org/images/logo.png" alt="görsel" class="img-responsive"></td>
-                                <td class="">Vue Js</td>
-                                <td class="w100">
-                                    <input
-                                            data-url="<?php echo base_url("product/isActiveSetter/");?>"
-                                            class="isActive"
-                                            id=""
-                                            type="checkbox"
-                                            data-switchery
-                                            data-color="#10c469"
-                                        <?php echo (true) ? "checked" : ""; ?>
-                                    />
-                                </td>
-                                <td class="w100">
-                                    <button data-url="<?php echo base_url("product/delete/");?>"
-                                            type="button" class="btn btn-danger btn-sm btn btn-block btn-outline remove-btn">
-                                        <i class="fa fa-trash"></i> Sil
-                                    </button>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td class="w100">1</td>
-                                <td class="w100"><img width="30" src="https://vuejs.org/images/logo.png" alt="görsel" class="img-responsive"></td>
-                                <td class="">Vue Js</td>
-                                <td class="w100">
-                                    <input
-                                            data-url="<?php echo base_url("product/isActiveSetter/");?>"
-                                            class="isActive"
-                                            id=""
-                                            type="checkbox"
-                                            data-switchery
-                                            data-color="#10c469"
-                                        <?php echo (true) ? "checked" : ""; ?>
-                                    />
-                                </td>
-                                <td class="w100">
-                                    <button data-url="<?php echo base_url("product/delete/");?>"
-                                            type="button" class="btn btn-danger btn-sm btn btn-block btn-outline remove-btn">
-                                        <i class="fa fa-trash"></i> Sil
-                                    </button>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td class="w100">1</td>
-                                <td class="w100"><img width="30" src="https://vuejs.org/images/logo.png" alt="görsel" class="img-responsive"></td>
-                                <td class="">Vue Js</td>
-                                <td class="w100">
-                                    <input
-                                            data-url="<?php echo base_url("product/isActiveSetter/");?>"
-                                            class="isActive"
-                                            id=""
-                                            type="checkbox"
-                                            data-switchery
-                                            data-color="#10c469"
-                                        <?php echo (true) ? "checked" : ""; ?>
-                                    />
-                                </td>
-                                <td class="w100">
-                                    <button data-url="<?php echo base_url("product/delete/");?>"
-                                            type="button" class="btn btn-danger btn-sm btn-outline btn btn-block remove-btn">
-                                        <i class="fa fa-trash"></i> Sil
-                                    </button>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td class="w100">1</td>
-                                <td class="w100"><img width="30" src="https://vuejs.org/images/logo.png" alt="görsel" class="img-responsive"></td>
-                                <td class="">Vue Js</td>
-                                <td class="w100">
-                                    <input
-                                            data-url="<?php echo base_url("product/isActiveSetter/");?>"
-                                            class="isActive"
-                                            id=""
-                                            type="checkbox"
-                                            data-switchery
-                                            data-color="#10c469"
-                                        <?php echo (true) ? "checked" : ""; ?>
-                                    />
-                                </td>
-                                <td class="w100">
-                                    <button data-url="<?php echo base_url("product/delete/");?>"
-                                            type="button" class="btn btn-danger btn-sm btn-outline btn btn-block remove-btn">
-                                        <i class="fa fa-trash"></i> Sil
-                                    </button>
-                                </td>
-
-                            </tr>
+                        <?php } ?>
                         </tbody>
                   </table>
-
+                      <?php } ?>
                   </div>
                 </div>
 
